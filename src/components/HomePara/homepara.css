@@ -1,20 +1,70 @@
-.para{
-    background-color: rgb(0, 0, 70);
-    color: white;
-    padding-left: 150px;
-    display: flex;
+.para {
+  background-color: rgb(0, 0, 70);
+  color: white;
+  /* justify-content: center; */
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  
 }
 
-.img{
-    width: 50%;
-    padding: 40px;
+.img {
+  width: 50%;
+  padding: 40px 0px 40px 40px;
+  overflow: hidden;
+  position: relative; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.img img{
-    padding: 10px;
-    width: 500px;
+/* .imges1{
+    object-fit: cover;
+      width: 80%;
+} */
+.img img {
+    width: 100%;
+   object-fit: contain;
+   max-height: 500px;
+     
+
 }
-.text{
-    width: 50%;
-    padding: 70px;
-    padding-right: 200px;
+.text {
+  width: 40%;
+  padding: 40px 7vw 40px 20px;
+  
+   
+  /* padding: 70px; */
+  /* padding-right: 200px; */
 }
+
+
+@media (max-width: 768px) {
+  .para {
+    padding-left: 0px;
+    display: flex;
+    flex-direction: column;
+  }
+  .img {
+    overflow: hidden;
+    width: auto;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+  }
+  .img img {
+    padding: 20px;
+    width: 100%;
+    width: auto;
+    overflow: hidden;
+     height: auto; 
+     max-height: 100%;
+  }
+
+  .text {
+    width: auto;
+    padding: 20px;
+    padding-right: 20px;
+  }
+}
+
+

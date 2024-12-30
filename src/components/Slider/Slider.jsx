@@ -7,6 +7,14 @@ const images = [
   'slider/image3F.png'
 ];
 
+const imagesMin = [
+  "slider/image22.jpeg",
+  "slider/imageSlider.png",
+  "slider/sliderImage.png",
+  "slider/sliderImage3.png",
+  "slider/sliderImage4.png",
+  "slider/image33.jpeg",
+];
 const Slider = () => {
   const [current, setCurrent] = useState(0);
 
@@ -18,15 +26,30 @@ const Slider = () => {
   }, []);
 
   return (
-    <div className="slider">
-      {images.map((image, index) => (
-        <div
-          className={`slide ${index === current ? 'active' : ''}`}
-          key={index}
-          style={{ backgroundImage: `url(${image})` }}
-        />
-      ))}
-    </div>
+    <>
+      <div className="sliderMain">
+        <div className="slider">
+          {images.map((image, index) => (
+            <div
+              className={`slide ${index === current ? "active" : ""}`}
+              key={index}
+              style={{ backgroundImage: `url(${image})` }}
+            />
+          ))}
+        </div>
+      </div>
+      <div className="slider-min">
+        <div className="sliderMin">
+          {imagesMin.map((image, index) => (
+            <div
+              className={`slide ${index === current ? "active" : ""}`}
+              key={index}
+              style={{ backgroundImage: `url(${image})` }}
+            />
+          ))}
+        </div>
+      </div>
+    </>
   );
 }
 

@@ -5,8 +5,16 @@
     height: 60vh;
     position: relative;
     overflow: hidden;
+    /* display: hidden; */
   }
+    .sliderMin{
+      width: 100%;
+    height: 50vh;
+    position: relative;
+    overflow: hidden;
+    }
   
+
   .slide {
     width: 100%;
     height: 100%;
@@ -26,3 +34,23 @@
     left: -100%;
   }
   
+
+.slider {
+  display: none;
+}
+
+
+.slider-min {
+  display: block;
+}
+
+
+@media (min-width: 768px) {
+  .slider {
+    display: block; 
+  }
+  .slider-min {
+    display: none; 
+  }
+}
+

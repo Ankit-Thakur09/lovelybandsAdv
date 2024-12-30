@@ -3,12 +3,11 @@
     align-items: center;
     justify-content: space-around;
     align-items: flex-start;
-    padding: 10px 100px; 
+    padding: 10px ; 
 }
 .display{
     margin-top:10px ;
-    margin-left: -90px;
-    display: block;
+    width: 50%;
     position: initial;
     border: 2px solid gray;
 }
@@ -18,10 +17,11 @@
   color: #4d4d4d;
 } */
 .display img{
-    width: 600px;
+    width:100%;
+ 
 }
 .formItems{
-    width: 670px;
+    width: 50%;
     height: 970px;
     margin-left: 10px;
     overflow: auto;
@@ -265,6 +265,7 @@
 .selectBand{
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .imgBoxItems:hover{
   background-color: #000046;
@@ -317,4 +318,113 @@
 .resetBtn{
   padding: 10px 20px;
   border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+ .formOptions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 0px 0px; 
+}
+
+.selectBand{
+
+  /* display:grid;
+ grid-template-columns: 1fr 1fr; */
+ display: flex;
+  flex-wrap: wrap;
+    justify-content: center;
+
+}
+.formItems{
+    width: 100%;
+    margin: 0px;
+    padding:0px;
+
+    
+  
+}
+.display{
+/* margin: 20px; */
+  width: auto;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.display img{
+    width: 100%;
+       margin-left: 0px;
+}
+
+.lanText{
+
+  margin-left:10px ;
+  
+}
+.lanWidth,.lanLenght{
+
+ display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+margin: 0px;
+gap: 20px;
+  }
+  
+  .color{
+  
+ display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+margin: 0px 10px;
+gap: 10px;
+  }
+
+   .message-row {
+    display: flex;
+flex-direction: column;
+  
+  }
+  .msgBox {
+    width: 100%;
+    padding: 8px 0px 8px 4px;
+
+    
+  }
+  .noteBox{
+    padding: 0%;
+    width: 100%;
+ 
+  }
+  .FormHeadTitle{
+  background-color: #000046;
+  padding: 8px 10px;
+  color: white;
+  border-radius: 4px;
+  margin: 10px;
+}
+.attachment1{
+  background-color: #ccc;
+  padding: 10px;
+}
+.color1 {
+    display: flex;
+   flex-wrap: wrap;
+    flex: 0;
+    
+  }
+  .landL1{
+    width: 100px;
+    gap:10px;
+    
+  }
+  .landW1{
+    width: 100px;
+  }
+
+
 }

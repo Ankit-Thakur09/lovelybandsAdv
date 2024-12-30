@@ -57,40 +57,60 @@ const Custom = () => {
       {/* <h2>Choose a Wristband Style</h2> */}
       <div className="formOptions">
         <div className="display">
-          <WristbandPreview selectedWristband={selectedWristband} name={name} color={color} font={font} startIcon={startIcon} endIcon={endIcon} />
+          <WristbandPreview
+            selectedWristband={selectedWristband}
+            name={name}
+            color={color}
+            font={font}
+            startIcon={startIcon}
+            endIcon={endIcon}
+          />
         </div>
-        <div className='formItems' >
+        <div className="formItems">
           {/* Type */}
           <div className="SelectType">
-            <p className='FormHeadTitle'>1. Please Select the type of band you want</p>
-            <div className='selectBand'>
+            <p className="FormHeadTitle">
+              1. Please Select the type of band you want
+            </p>
+            <div className="selectBand">
               {Custom.map((wristband) => (
-                <div className='imgBoxItems'  >
-                  <img className='optionImg'
-                    key={wristband.id}
+                <div className="imgBoxItems" key={wristband.id}>
+                  <img
+                    className="optionImg"
                     src={wristband.image}
                     alt={`Wristband ${wristband.id}`}
                     onClick={() => handleWristbandClick(wristband)}
-                    style={{ cursor: 'pointer' }}
+                    style={{ cursor: "pointer" }}
                   />
-                  <span >{wristband.design}</span>
+                  <span>{wristband.design}</span>
                 </div>
-
               ))}
             </div>
           </div>
 
-          <p className='FormHeadTitle'>2. Customize your message</p>
+          <p className="FormHeadTitle">2. Customize your message</p>
           <div className="custom-message">
             {/* msg line one */}
             <div className="message-row">
               <div className="msg">
                 <p>Your Message Here</p>
-                <input type="text" className="msgBox" max={1} onChange={(e) => setName(e.target.value)} value={name} />
+                <input
+                  type="text"
+                  className="msgBox"
+                  max={1}
+                  onChange={(e) => setName(e.target.value)}
+                  value={name}
+                />
               </div>
               <div className="select-font">
                 <p>Choose your font .</p>
-                <select name="" id="" placeholder="select font" onChange={(e) => setFont(e.target.value)} value={font}>
+                <select
+                  name=""
+                  id=""
+                  placeholder="select font"
+                  onChange={(e) => setFont(e.target.value)}
+                  value={font}
+                >
                   <option value="Arial">Arial</option>
                   <option value="Verdana">Verdana</option>
                   <option value="Georgia">Georgia</option>
@@ -102,9 +122,10 @@ const Custom = () => {
                   <option value="Arial Black">Arial Black</option>
                   <option value="Impact">Impact</option>
                   <option value="Lucida Console">Lucida Console</option>
-                  <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+                  <option value="Lucida Sans Unicode">
+                    Lucida Sans Unicode
+                  </option>
                 </select>
-
               </div>
             </div>
 
@@ -112,7 +133,13 @@ const Custom = () => {
             <div className="message-row">
               <div className="select-font">
                 <p>Imprint Color</p>
-                <select name="" id="" placeholder="select font" onChange={(e) => setColor(e.target.value)} value={color}>
+                <select
+                  name=""
+                  id=""
+                  placeholder="select font"
+                  onChange={(e) => setColor(e.target.value)}
+                  value={color}
+                >
                   <option value="white">White</option>
                   <option value="mediumturquoise">Green</option>
                   <option value="yellow">Yellow</option>
@@ -129,7 +156,6 @@ const Custom = () => {
                   <option value="blueviolet">Blue Violet</option>
                   <option value="springgreen">Spring Green</option>
                   <option value="gold">Gold</option>
-
                 </select>
               </div>
             </div>
@@ -137,7 +163,13 @@ const Custom = () => {
             <div className="message-row">
               <div className="select-font">
                 <p>Select Start Icon</p>
-                <select name="" id="" placeholder="select font" onChange={(e) => setStartIcon(e.target.value)} value={startIcon}>
+                <select
+                  name=""
+                  id=""
+                  placeholder="select font"
+                  onChange={(e) => setStartIcon(e.target.value)}
+                  value={startIcon}
+                >
                   <option value=""></option>
                   <option value="💎">💎</option>
                   <option value="🏐">🏐</option>
@@ -188,7 +220,13 @@ const Custom = () => {
               </div>
               <div className="select-font">
                 <p>Select End Icon</p>
-                <select name="" id="" placeholder="select font" onChange={(e) => setEndIcon(e.target.value)} value={endIcon}>
+                <select
+                  name=""
+                  id=""
+                  placeholder="select font"
+                  onChange={(e) => setEndIcon(e.target.value)}
+                  value={endIcon}
+                >
                   <option value=""></option>
                   <option value="💎">💎</option>
                   <option value="🏐">🏐</option>
@@ -238,7 +276,6 @@ const Custom = () => {
                   <option value="💠">💠</option>
                   <option value="🌐">🌐</option>
                 </select>
-
               </div>
             </div>
             {/* message line three */}
@@ -258,97 +295,100 @@ const Custom = () => {
                   <option value="">two Color</option>
                   <option value="">Three Color</option>
                 </select>
-
               </div>
             </div>
-
 
             <div className="message-row">
               <p>Order Notes</p>
               <br />
-              <textarea name="" id="" className='noteBox'>
-
-              </textarea>
+              <textarea name="" id="" className="noteBox"></textarea>
             </div>
             <div className="message-row ">
-
-
-              <button name="" id="" className='resetBtn' onClick={resetHandle}>
+              <button name="" id="" className="resetBtn" onClick={resetHandle}>
                 Reset
               </button>
             </div>
-
           </div>
 
-
           {/* Choose color */}
-          <p className='FormHeadTitle'>3. Please select the color you want</p>
-          <div className='color'>
+          <p className="FormHeadTitle">3. Please select the color you want</p>
+          <div className="color">
             <div className="color1">
               <div className="gold"></div>
-              <input type="text" placeholder='quantity' />
-
+              <input type="text" placeholder="quantity" />
             </div>
             <div className="color1">
               <div className="black"></div>
-              <input type="text" placeholder='quantity' />
-
+              <input type="text" placeholder="quantity" />
             </div>
             <div className="color1">
               <div className="brown"></div>
-              <input type="text" placeholder='quantity' />
-
+              <input type="text" placeholder="quantity" />
             </div>
             <div className="color1">
               <div className="pink"></div>
-              <input type="text" placeholder='quantity' />
-
+              <input type="text" placeholder="quantity" />
             </div>
-
           </div>
-
-
 
           {/* select Size */}
           <div className="lanSize">
-            <p className='FormHeadTitle'>4. Please Select the size you want</p>
-            <p><pre>Width</pre></p>
+            <p className="FormHeadTitle">4. Please Select the size you want</p>
+            <p className="lanText">
+                 Width
+            </p>
             <div className="lanWidth">
               <div className="landW1">
-                <p>1 inch <span className='SUnit'>25 mm</span></p>
+                <p>
+                  1 inch <span className="SUnit">25 mm</span>
+                </p>
                 <input type="radio" name="width" className="radio-input" />
               </div>
               <div className="landW1">
-                <p>3/4 inch <span className='SUnit'>20 mm</span></p>
+                <p>
+                  3/4 inch <span className="SUnit">20 mm</span>
+                </p>
                 <input type="radio" name="width" className="radio-input" />
               </div>
               <div className="landW1">
-                <p>5/8 inch <span className='SUnit'>15 mm</span></p>
+                <p>
+                  5/8 inch <span className="SUnit">15 mm</span>
+                </p>
                 <input type="radio" name="width" className="radio-input" />
               </div>
               <div className="landW1">
-                <p>7/8 inch <span className='SUnit'>11 mm</span></p>
+                <p>
+                  7/8 inch <span className="SUnit">11 mm</span>
+                </p>
                 <input type="radio" name="width" className="radio-input" />
               </div>
             </div>
 
             {/* Lenght */}
-            <p>Length</p>
+            <p className="lanText">Length</p>
             <div className="lanLenght">
               <div className="landL1">
-                <p>Small <span className='SUnit'>30 inch</span></p>
+                <p>
+                  Small <span className="SUnit">30 inch</span>
+                </p>
                 <input type="radio" name="length" className="radio-input" />
               </div>
               <div className="landL1">
-                <p>Standard <span className='SUnit'>36 inch</span></p>
+                <p>
+                  Standard <span className="SUnit">36 inch</span>
+                </p>
                 <input type="radio" name="length" className="radio-input" />
               </div>
               <div className="landL1">
-                <p>Large <span className='SUnit'>42 inch</span></p>
+                <p>
+                  Large <span className="SUnit">42 inch</span>
+                </p>
                 <input type="radio" name="length" className="radio-input" />
               </div>
               <div className="landL1">
-                <p>Extra Large <span className='SUnit'>48 inch</span></p>
+                <p>
+                  Extra Large <span className="SUnit">48 inch</span>
+                </p>
                 <input type="radio" name="length" className="radio-input" />
               </div>
             </div>
@@ -356,35 +396,30 @@ const Custom = () => {
           {/* size end here */}
 
           {/* Attachment Style */}
-          <p className='FormHeadTitle'>5. Please select the Attachment you want</p>
-          <div className='color'>
+          <p className="FormHeadTitle">
+            5. Please select the Attachment you want
+          </p>
+          <div className="color">
             <div className="attachment1">
               <img src="./attacchment/attact1.webp" alt="hello" />
-              <input type="radio" name="attachment" placeholder='quantity' />
-
+              <input type="radio" name="attachment" placeholder="quantity" />
             </div>
             <div className="attachment1">
               <img src="./attacchment/attact2.webp" alt="" />
-              <input type="radio" name="attachment" placeholder='quantity' />
-
+              <input type="radio" name="attachment" placeholder="quantity" />
             </div>
             <div className="attachment1">
               <img src="./attacchment/attact3.webp" alt="" />
-              <input type="radio" name="attachment" placeholder='quantity' />
-
+              <input type="radio" name="attachment" placeholder="quantity" />
             </div>
             <div className="attachment1">
               <img src="./attacchment/attact4.webp" alt="" />
-              <input type="radio" name="attachment" placeholder='quantity' />
-
+              <input type="radio" name="attachment" placeholder="quantity" />
             </div>
-
           </div>
-
         </div>
       </div>
-
-    </div >
+    </div>
   );
 };
 
